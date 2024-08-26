@@ -1,0 +1,35 @@
+function criptografar() {
+    let texto = document.getElementById('inputText').value;
+    let textoCriptografado = texto
+        .replace(/e/g, 'enter')
+        .replace(/i/g, 'imes')
+        .replace(/a/g, 'ai')
+        .replace(/o/g, 'ober')
+        .replace(/u/g, 'ufat');
+    document.getElementById('outputText').value = textoCriptografado;
+}
+
+function descriptografar() {
+    let texto = document.getElementById('inputText').value;
+    let textoDescriptografado = texto
+        .replace(/enter/g, 'e')
+        .replace(/imes/g, 'i')
+        .replace(/ai/g, 'a')
+        .replace(/ober/g, 'o')
+        .replace(/ufat/g, 'u');
+    document.getElementById('outputText').value = textoDescriptografado;
+}
+
+function copiarTexto() {
+    let textoCopiado = document.getElementById('outputText');
+    textoCopiado.select();
+    document.execCommand('copy');
+
+    let mensagem = document.getElementById('copyMessage');
+    mensagem.textContent = 'Texto copiado para a área de transferência!';
+    mensagem.style.display = 'block';
+
+    setTimeout(function() {
+        mensagem.style.display = 'none';
+    }, 3000);
+}

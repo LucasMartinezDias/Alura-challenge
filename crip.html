@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Decodificador</h1>
+        <textarea id="inputText" class="text-area" placeholder="Digite o texto aqui..."></textarea>
+        <div class="buttons">
+            <button class="btn" onclick="criptografar()">Criptografar</button>
+            <button class="btn" onclick="descriptografar()">Descriptografar</button>
+        </div>
+        <div class="output">
+            <textarea id="outputText" class="text-area" readonly placeholder="Texto resultante..."></textarea>
+        </div>
+        <button class="btn btn-copy" onclick="copiarTexto()">Copiar Texto</button>
+        <p id="copyMessage" class="copy-message"></p>
+        <footer>
+            <p>Desenvolvido por Lucas Martinez Dias - 2024</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
